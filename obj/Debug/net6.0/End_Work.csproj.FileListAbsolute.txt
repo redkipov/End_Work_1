@@ -1,0 +1,15 @@
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\bin\Debug\net6.0\End_Work.exe
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\bin\Debug\net6.0\End_Work.deps.json
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\bin\Debug\net6.0\End_Work.runtimeconfig.json
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\bin\Debug\net6.0\End_Work.dll
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\bin\Debug\net6.0\End_Work.pdb
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\End_Work.csproj.AssemblyReference.cache
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\End_Work.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\End_Work.AssemblyInfoInputs.cache
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\End_Work.AssemblyInfo.cs
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\End_Work.csproj.CoreCompileInputs.cache
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\End_Work.dll
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\refint\End_Work.dll
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\End_Work.pdb
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\End_Work.genruntimeconfig.cache
+C:\Users\muham\OneDrive\Рабочий стол\End_Work\obj\Debug\net6.0\ref\End_Work.dll
