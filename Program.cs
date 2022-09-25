@@ -16,8 +16,8 @@ namespace HomeWork2
         //////Номер задания//////
         public const string namberWork = "Итоговая проверочная работа C#";
         //////Название программ///////
-        public const string programName_1 = "Ввод массива с клавиатуры";
-        public const string programName_2 = "Заранее подготовленный массив";
+        public const string programName_1 = "Ввод данных массива с клавиатуры.";
+        public const string programName_2 = "Заранее подготовленный массив данных";
         public const string programName_3 = "Null";
         public const string programName_4 = "Null";
         public const string programName_5 = "Null";
@@ -167,7 +167,9 @@ namespace HomeWork2
         static void Program_1(int Exit_Play)
         {
             ///////////переменные
-            int[] arrayUser = new int[2];
+            string textUser = "Null";
+            string[] arrayUser = new string[21];
+            int numText = 0;
             ////////// Вывод меню и отслеживание нажатия кнопки для начала//////////////
             string nameProg = $"[1] {programName_1}";
             DevWrite(nameProg);
@@ -181,32 +183,64 @@ namespace HomeWork2
                 }
                 Console.ResetColor();
                 //))))))))))))))))) Logica (((((((((((((((((  
-                Console.WriteLine("(M не может быть больше N. Число N не больше 9000) ");
-                Console.WriteLine("Введите первое число М: ");
-                arrayUser[0] = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Введите второе число N: ");
-                arrayUser[1] = Convert.ToInt32(Console.ReadLine());
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
-                DevWrite(nameProg);
-                Console.WriteLine("Результат работы: ");
-                if (arrayUser[0] > arrayUser[1])
+                Console.WriteLine("Введите любой текст через запятую или точку и нажмите Enter");
+                Console.WriteLine("Без пробелов. Не больше 20 слов!");
+                try
                 {
-                    Console.WriteLine($"Ваши числа: M:{arrayUser[0]} N:{arrayUser[1]}");
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Начальное число M больше конечной N");
+                   textUser = Console.ReadLine();
+                   
+                    for (int i = 0; textUser.Length > i; i++)
+                    {
+                        if (',' == textUser[i])
+                        {
+                            numText++;
+                        }
+                        else if ('.' == textUser[i])
+                        {
+                            numText++;
+                        }
+                        else if (' ' == textUser[i])
+                        {
+                            //arrayUser[numText] += Convert.ToString(textUser[i]);
+                        }
+                        else
+                        {
+                            arrayUser[numText] += Convert.ToString(textUser[i]);
+                        }
+                       
+                    }
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    DevWrite(nameProg);
+                    Console.WriteLine("Результат работы: ");
                 }
-                else if (arrayUser[1] > 9000)
+                catch (System.Exception)
                 {
-                    Console.WriteLine($"Ваши числа: M:{arrayUser[0]} N:{arrayUser[1]}");
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Число N превышает 9000. Вычисление не может быть выполнено, так как это может привести к переполнению стека.");
+                   Console.ForegroundColor = ConsoleColor.DarkRed;
+                   DevWrite(nameProg);
+                   Console.WriteLine("Вы ничего не ввели. Ошибка!");
                 }
-                else
+                if (numText > 0)
                 {
-                    Console.WriteLine($"Ваши числа: M:{arrayUser[0]} N:{arrayUser[1]}");
+                    for (int i = 0; numText >= i; i++)
+                    {
+                        Console.WriteLine($"Ваше {i+1} слово: {arrayUser[i]}");
+                    }
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("\nДанные из массива, которые меньше 3 символов:");
                     Console.ForegroundColor = ConsoleColor.Green;
-                    PrintNumNat(arrayUser, arrayUser[0]);
+
+                    for (int i = 0; numText >= i; i++)
+                    {
+                        if (arrayUser[i].Length < 4)
+                        {
+                            Console.WriteLine($" №{i+1} массива: {arrayUser[i]}");
+                        }
+                        
+                    }
                 }
+                    numText=0;
+                    arrayUser = new string[21];
+                
                 Exit_Play = TextWrite(Exit_Play, nameProg);
             }
         }
@@ -215,9 +249,9 @@ namespace HomeWork2
         static void Program_2(int Exit_Play)
         {
             ///////////переменные
-            int[] arrayUser = new int[2];
+            string[] arrayUser = new string[10] {":)","Coding","Возможно","Ты","Генри",":D","3D2А24","F12","$","Рубль"};
             ////////// Вывод меню и отслеживание нажатия кнопки для начала//////////////
-            string nameProg = $"[2] {programName_2}";
+            string nameProg = $"[1] {programName_2}";
             DevWrite(nameProg);
             Exit_Play = TextWrite(Exit_Play, nameProg);
             while (Exit_Play == 1)
@@ -229,33 +263,38 @@ namespace HomeWork2
                 }
                 Console.ResetColor();
                 //))))))))))))))))) Logica (((((((((((((((((  
-                Console.WriteLine("(M не может быть больше N. Число N не больше 10000) ");
-                Console.WriteLine("Введите первое число М: ");
-                arrayUser[0] = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Введите второе число N: ");
-                arrayUser[1] = Convert.ToInt32(Console.ReadLine());
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
-                DevWrite(nameProg);
-                Console.WriteLine("Результат работы: ");
-                if (arrayUser[0] > arrayUser[1])
+                Console.WriteLine("Введите любой текст через запятую или точку и нажмите Enter");
+                Console.WriteLine("Без пробелов. Не больше 20 слов!");
+                try
                 {
-                    Console.WriteLine($"Ваши числа: M:{arrayUser[0]} N:{arrayUser[1]}");
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Начальное число M больше конечной N");
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    DevWrite(nameProg);
+                    Console.WriteLine("Результат работы: ");
                 }
-                else if (arrayUser[1] > 10000)
+                catch (System.Exception)
                 {
-                    Console.WriteLine($"Ваши числа: M:{arrayUser[0]} N:{arrayUser[1]}");
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Число N превышает 10000. Вычисление не может быть выполнено, так как это может привести к переполнению стека.");
-                }
-                else
-                {
-                    Console.WriteLine($"Ваши числа: M:{arrayUser[0]} N:{arrayUser[1]}");
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    PrintNumSum(arrayUser, arrayUser[0], arrayUser[0]);
+                   Console.ForegroundColor = ConsoleColor.DarkRed;
+                   DevWrite(nameProg);
+                   Console.WriteLine("Ошибка!");
                 }
 
+                    for (int i = 0; arrayUser.Length > i; i++)
+                    {
+                        Console.WriteLine($"Ваше {i+1} слово: {arrayUser[i]}");
+                    }
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("\nДанные из массива, которые меньше 3 символов:");
+                    Console.ForegroundColor = ConsoleColor.Green;
+
+                    for (int i = 0; arrayUser.Length > i; i++)
+                    {
+                        if (arrayUser[i].Length < 4)
+                        {
+                            Console.WriteLine($" №{i+1} массива: {arrayUser[i]}");
+                        }
+                        
+                    }
+                
                 Exit_Play = TextWrite(Exit_Play, nameProg);
             }
         }
@@ -276,7 +315,7 @@ namespace HomeWork2
                     DevWrite(nameProg);
                     Exit_Play = TextWrite(Exit_Play, nameProg);
                 }
-                  
+                  //Пусто
                 
                 Exit_Play = TextWrite(Exit_Play, nameProg);
             }
